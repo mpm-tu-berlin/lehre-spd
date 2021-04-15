@@ -1,0 +1,71 @@
+% Print
+\documentclass[DIV=15,headinclude=true]{scrreprt}
+
+%Packages, die für die englische Sprache
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+%Packages für Graphik
+\usepackage[]{graphicx}
+\graphicspath{{figures/}}
+
+%BibLaTex
+\usepackage[backend=biber]{biblatex}
+\addbibresource{literature/bibliography.bib} 
+
+%Package, damit Bibtex-URL klappt
+\usepackage[pdfusetitle]{hyperref}
+\usepackage{url}
+
+%Noch schönere Typographie
+\usepackage{microtype}
+
+%Kästen
+\usepackage{framed}
+
+%Package für schöne Tabellen mit variabler Breite
+%\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{booktabs}
+
+%%%%% BEGINN KOPF- UND FUẞZEILE %%%%%
+\usepackage[headsepline,footsepline]{scrlayer-scrpage}
+\usepackage{graphicx}
+\pagestyle{scrheadings}
+\ohead{\includegraphics[height=1cm]{figures/bluemarble}}
+\chead{\headmark}
+\automark{section}
+%\ihead{\includegraphics[height=1cm]{bluemarble.jpg}}
+\ifoot{\csname @title\endcsname}\cfoot{\pagemark}
+\ofoot{\today}
+%%%%% ENDE KOPF- UND FUẞZEILE %%%%%
+
+\begin{document}
+%%%%% BEGINN TITEL %%%%%
+\title{Prüfungsleistungen und Bewertungskriterien}
+\subtitle{Entwicklungsmethoden Nachhaltiger Produkte}
+\author{EnWiNaP-Team}
+\maketitle
+%%%%% ENDE TITEL %%%%%
+
+%%%%% BEGINN FRONT MATTER %%%%%
+\pagenumbering{roman}
+\tableofcontents
+%%%%% ENDE FRONT MATTER %%%%%
+
+
+%%%%% BEGINN INHALT %%%%%
+\section{Über dieses Dokument}
+
+%%%%% ENDE INHALT %%%%%
+
+%%%%% BEGINN BACK MATTER %%%%%
+
+%%%%% Ende Back Matter %%%%%
+\printbibliography
+
+\appendix
+
+\end{document}

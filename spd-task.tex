@@ -1,11 +1,12 @@
 % Print
-\documentclass[DIV=15,headinclude=true]{scrreprt}
+\documentclass[headinclude=true]{scrreprt}
 
 %Packages, die für die englische Sprache
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[english]{babel}
+\usepackage{csquotes}
 
 %Packages für Graphik
 \usepackage[]{graphicx}
@@ -30,23 +31,25 @@
 \usepackage{tabulary}
 \usepackage{booktabs}
 
+\usepackage{todonotes}
+
 %%%%% BEGINN KOPF- UND FUẞZEILE %%%%%
 \usepackage[headsepline,footsepline]{scrlayer-scrpage}
 \usepackage{graphicx}
 \pagestyle{scrheadings}
-\ohead{\includegraphics[height=1cm]{figures/bluemarble}}
+\ohead{\includegraphics[height=1cm]{figures/MPM_Logo}}
 \chead{\headmark}
 \automark{section}
-%\ihead{\includegraphics[height=1cm]{bluemarble.jpg}}
+\ihead{\includegraphics[height=1cm]{figures/TU_Logo}}
 \ifoot{\csname @title\endcsname}\cfoot{\pagemark}
 \ofoot{\today}
 %%%%% ENDE KOPF- UND FUẞZEILE %%%%%
 
 \begin{document}
 %%%%% BEGINN TITEL %%%%%
-\title{Prüfungsleistungen und Bewertungskriterien}
-\subtitle{Entwicklungsmethoden Nachhaltiger Produkte}
-\author{EnWiNaP-Team}
+\title{Semester Task}
+\subtitle{Global Porudction Engineering}
+\author{Alexander Grahle \and Ludger Heide \and Dr. Tu-Anh Fay}
 \maketitle
 %%%%% ENDE TITEL %%%%%
 
@@ -57,7 +60,80 @@
 
 
 %%%%% BEGINN INHALT %%%%%
-\section{Über dieses Dokument}
+\clearpage
+\chapter{About this document}
+
+This document serves as a consolidated description of the things in the course ``Systematic Product Development'' (SPD) that are relevant to grading. It contains information on how grades are calculated as well as the official documentation of the group task. While we aim to keep the defintion of the task consistent throughout the semester, this is a ``living document'' into which the clarifications made in response to your questions will be incorporated. Its version history is maintained on GitHub\footnote{\url{https://github.com/mpm-tu-berlin/lehre-spd}}. 
+
+\chapter{Grading}
+
+\section{Exam Components}
+
+The exam is composed of four different components. Three of these (presentation, 1\textsuperscript{st} and 2\textsuperscript{nd} project report) are conducted in groups, the final exam is conducted individually. The weighing of these components is shown in table \ref{tab:komponenten}.
+
+\begin{table} \centering
+ \caption{Point Distribution}
+ \label{tab:komponenten}
+ \begin{tabular}{lr}
+  \toprule
+  Component & Points \\ \midrule
+  1\textsuperscript{st} submission of project report & 10 \\ 
+  2\textsuperscript{nd} submission of project report & 25 \\ 
+  Presentation of project results & 15 \\ 
+  Digital examination & 50 \\ \midrule
+  \textbf{Sum} & \textbf{100} \\ \bottomrule
+ \end{tabular}
+\end{table}
+
+\subsection{Project Report}
+
+The task for the project report is explained in detail in chapter \ref{chap:projektaufgabe}. Fir the form, we expect a proper scientific/technical report that observes the rules of good scientific and engineering practice as well as the stylistic ``rules'' of good typography. It should be submitted as a PDF file not exceeding XX\todo{Fill in pages for first submission} content pages\footnote{``Content pages'' refers to the page count excluding front and back matter, such as table of contents, bibliography etc.} for the 1\textsuperscript{st} submission and XX\todo{Fill in pages for the second submission} for the 2\textsuperscript{nd} submission.
+
+\subsection{Presentation of Project Results}
+
+\todo[inline]{Presentation -- a little bit like in EnWiNaP, focusing on the unique features of each solution rather than each group showing the same thing. Perhaps each group focuses on one topic like cost, morphological box etc.?}
+
+\subsection{Digital examination}
+
+The final exam will be conducted online on ISIS as an individual task. It will consist both of multiple choice questions and freeform questions testing both straight-up reproduction of the course knowledge (for example ``fill in the blanks'') as well as application (for example ``identify problems and recommend solutions for a given analysis''). There will be XX\todo{What aids are allowed?} aids such as written notes allowed.
+
+\section{Grading Scale}
+
+The final grade is calculated as follows:
+
+\begin{enumerate}
+ \item The component percentages are rounded to full points. Example: Getting 84\% in a 10-point component leads to 8 points for this component.
+ \item The points for each component are summed up.
+ \item The final grade is calculated according to table \ref{tab:notenskala}
+\end{enumerate}
+
+Please note that if any part of the exam is failed due to scientific fraud (e.g. plagiarism), the whole module will be graded as ``failed'' and will need to be repeated.
+
+\begin{table} \centering
+ \caption{Grading Scale}
+ \label{tab:notenskala}
+ \begin{tabular}{rr}
+  \toprule
+  Points & Grade \\ \midrule
+  $\geq$ 95 & 1,0 \\
+  $\geq$ 90 & 1,3 \\
+  $\geq$ 85 & 1,7 \\
+  $\geq$ 80 & 2,0 \\
+  $\geq$ 75 & 2,3 \\
+  $\geq$ 70 & 2,7 \\
+  $\geq$ 65 & 3,0 \\
+  $\geq$ 60 & 3,3 \\
+  $\geq$ 55 & 3,7 \\
+  $\geq$ 50 & 4,0 \\
+  $<$ 50 & 5,0 \\ \bottomrule
+ \end{tabular}
+\end{table}
+
+\chapter{The Truly Cordless Drill}
+\label{chap:projektaufgabe}
+
+Your task for this semester will be to design a cordless drill. There is a twist though: It should work without utilitzing any electricity. By this we mean that it should still work if all physical laws governing the flow of electricity in (semi)conductors were not to exist. Electrical motors, batteries and capacitors are out, as are electric switches and silicon-based control systems.
+
 
 %%%%% ENDE INHALT %%%%%
 
